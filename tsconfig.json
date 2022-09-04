@@ -1,6 +1,8 @@
 {
     "compilerOptions": {
         "jsx": "preserve",
+        "target": "ESNext",
+        "module": "ESNext",
         "baseUrl": ".",
         "paths": {
             "/@/*":["src/*"],
