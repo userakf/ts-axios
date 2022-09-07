@@ -24,4 +24,11 @@ export class QKAxios {
             return res
         }, undefined)
     }
+    get(){
+
+    }
+    post(){
+        
+    }
+    request(){}
 }
