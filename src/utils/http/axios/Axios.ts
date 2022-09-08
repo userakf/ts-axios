@@ -30,5 +30,7 @@ export class QKAxios {
     post(){
         
     }
+    put(){}
+    del(){}
     request(){}
 }
