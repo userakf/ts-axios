@@ -24,13 +24,13 @@ export class QKAxios {
             return res
         }, undefined)
     }
-    get(){
+    get<T = any>(){
 
     }
-    post(){
+    post<T = any>(){
         
     }
-    put(){}
-    del(){}
-    request(){}
+    put<T = any>(){}
+    del<T = any>(){}
+    request<T = any>(){}
 }
