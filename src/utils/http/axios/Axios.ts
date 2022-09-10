@@ -1,6 +1,9 @@
 import axios from "axios";
 import type { AxiosInstance, AxiosRequestConfig, AxiosResponse } from 'axios'
 
+interface RequestOptions {
+
+}
 
 export class QKAxios {
     private axiosInstance: AxiosInstance
@@ -24,13 +27,19 @@ export class QKAxios {
             return res
         }, undefined)
     }
-    get<T = any>(){
-
+    get<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return null
     }
-    post<T = any>(){
-        
+    post<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return null
     }
-    put<T = any>(){}
-    del<T = any>(){}
-    request<T = any>(){}
+    put<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return null
+    }
+    del<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return null
+    }
+    request<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return null
+    }
 }
