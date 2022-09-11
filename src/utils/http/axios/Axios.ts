@@ -28,16 +28,16 @@ export class QKAxios {
         }, undefined)
     }
     get<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
-        return null
+        return this.request({ ...config, method: 'GET' }, options)
     }
     post<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
-        return null
+        return this.request({ ...config, method: 'POST' }, options)
     }
     put<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
-        return null
+        return this.request({ ...config, method: 'PUT' }, options)
     }
-    del<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
-        return null
+    delete<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        return this.request({ ...config, method: 'DELETE' }, options)
     }
     request<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
         return null
