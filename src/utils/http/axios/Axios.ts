@@ -14,6 +14,11 @@ export class QKAxios {
         this.setupInterceptors()
     }
 
+    private getTransform() {
+        const { transformRequest } = this.options
+        return transformRequest
+    }
+
     setupInterceptors() {
         this.axiosInstance.interceptors.request.use((config: AxiosRequestConfig) => {
             console.log('请求拦截');
@@ -40,6 +45,11 @@ export class QKAxios {
         return this.request({ ...config, method: 'DELETE' }, options)
     }
     request<T = any>(config: AxiosRequestConfig, options?: RequestOptions): Promise<T> {
+        let conf = config
+        const transform = this.getTransform()
+        const { transformRequest } = this.options
+        const opt: RequestOptions = Object.assign({}, transformRequest, options)
         return null
     }
+
 }
