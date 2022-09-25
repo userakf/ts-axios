@@ -1,3 +1,2 @@
-export function isObject(obj: any): obj is object {
-  return obj!== null && typeof obj === 'object' &&!Array.isArray(obj);
-}
+export const isObject = (o: any): o is object =>
+  toString.call(o) === '[object Object]'
